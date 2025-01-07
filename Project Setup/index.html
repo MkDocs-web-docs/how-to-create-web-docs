@@ -111,81 +111,73 @@
                     <div class="col-md-9" role="main">
 
 <h1 id="step-1-creating-an-organization-in-github">Step 1: Creating an organization in GitHub</h1>
-<ol>
-<li><strong>Create an organization:</strong>  </li>
+<p><strong>Create an organization:</strong>  </p>
+<ul>
 <li>Log in to GitHub.  </li>
-<li>
-<p>Select the "Create an organization" menu.
-   <img alt="Create a new organization.png" src="../image/Project%20Setup/Create%20an%20organization%20in%20Github/Create%20a%20new%20organization.png" /></p>
-</li>
-<li>
+<li>Select the "Create an organization" menu.
+   <img alt="Create a new organization.png" src="../image/Project%20Setup/Create%20an%20organization%20in%20Github/Create%20a%20new%20organization.png" /></li>
+</ul>
 <p><strong>Select a pricing plan:</strong>  </p>
-</li>
-<li>
-<p>Choose an appropriate pricing plan for your organization.
-   <img alt="Free ogranization.png" src="../image/Project%20Setup/Create%20an%20organization%20in%20Github/Free%20ogranization.png" /></p>
-</li>
-<li>
+<ul>
+<li>Choose an appropriate pricing plan for your organization.
+   <img alt="Free ogranization.png" src="../image/Project%20Setup/Create%20an%20organization%20in%20Github/Free%20ogranization.png" /></li>
+</ul>
 <p><strong>Set up the organization:</strong>  </p>
-</li>
+<ul>
 <li>Fill in the necessary settings.<br />
 <img alt="Set up your organization.png" src="../image/Project%20Setup/Create%20an%20organization%20in%20Github/Set%20up%20your%20organization.png" /></li>
 <li>Confirm the creation.  </li>
-</ol>
+</ul>
 <p>➤ The URL of your future site will be generated from the "Organization name" field and will follow this structure: https://[site-name].github.io/.</p>
 <h1 id="step-2-create-a-new-repository">Step 2: Create a new repository</h1>
-<ol>
-<li><strong>Create a repository:</strong>
-<img alt="New repo.png" src="../image/Project%20Setup/Create%20a%20new%20repository/New%20repo.png" />
+<p><strong>Create a repository:</strong></p>
+<p><img alt="New repo.png" src="../image/Project%20Setup/Create%20a%20new%20repository/New%20repo.png" />
    ➤ Create a repository on behalf of the organization.<br />
    ➤ Select public/empty (the repository should not contain, for example, README.md).
-<img alt="a new repository config.png" src="../image/Project%20Setup/Create%20a%20new%20repository/a%20new%20repository%20config.png" /></li>
-<li><strong>Clone the repository in PyCharm:</strong></li>
+<img alt="a new repository config.png" src="../image/Project%20Setup/Create%20a%20new%20repository/a%20new%20repository%20config.png" />
+<strong>Clone the repository in PyCharm:</strong></p>
+<ul>
 <li>Copy the repository URL (either HTTPS or SSH).</li>
 <li>In PyCharm, select "Clone Repository" or "Get from VCS".
    <img alt="Get from VCS.png" src="../image/Project%20Setup/Create%20a%20new%20repository/Get%20from%20VCS.png" /></li>
 <li>Copy the URL from your organization's page in GitHub (I choose SSH).
    <img alt="SSH Url.png" src="../image/Project%20Setup/Create%20a%20new%20repository/SSH%20Url.png" /></li>
 <li>Paste the URL and click "Clone".</li>
-</ol>
-<p>➤ If you choose SSH, make sure you have SSH settings configured. We'll discuss why this is more convenient in later posts.<br />
-   - Click “Trust Project” in the window that opens.</p>
+</ul>
+<p>➤ If you choose SSH, make sure you have SSH settings configured. We'll discuss why this is more convenient in later posts.  </p>
+<ul>
+<li>Click “Trust Project” in the window that opens.</li>
+</ul>
 <h1 id="step-3-setting-up-a-virtual-environment">Step 3: Setting up a virtual environment</h1>
-<ol>
-<li><strong>Create a virtual environment:</strong></li>
-<li>
-<p>Run the following command in the PyCharm terminal:
+<p><strong>Create a virtual environment:</strong></p>
+<ul>
+<li>Run the following command in the PyCharm terminal:
    <img alt="python -m venv venv.png" src="../image/Project%20Setup/Setting%20up%20a%20virtual%20environment/python%20-m%20venv%20venv.png" />
-     <code>python -m venv .venv</code>
-   ➤ If you get a "command not found" error, check your installed Python version and adjust the command accordingly.<br />
-<img alt="venv -not found.png" src="../image/Project%20Setup/Setting%20up%20a%20virtual%20environment/venv%20-not%20found.png" />
+     <code>python -m venv .venv</code></li>
+</ul>
+<p>➤ If you get a "command not found" error, check your installed Python version and adjust the command accordingly.  </p>
+<p><img alt="venv -not found.png" src="../image/Project%20Setup/Setting%20up%20a%20virtual%20environment/venv%20-not%20found.png" />
    Your Python version:<br />
 <img alt="Python version.png" src="../image/Project%20Setup/Setting%20up%20a%20virtual%20environment/Python%20version.png" />
    For example, I used:
-   ```
-   python3.13 -m venv .venv
-➤ You can see the PyCharm version in the lower right corner of the screen.<br />
+   <code>python3.13 -m venv .venv</code></p>
+<p>➤ You can see the PyCharm version in the lower right corner of the screen.<br />
 ➤ Setting up a virtual environment helps avoid conflicts between packages in different projects.<br />
 ➤ It's not possible to install two or more different versions of the same package in one environment. The solution is to create another environment.</p>
-</li>
-<li>
 <p><strong>Activate the environment:</strong></p>
-</li>
+<ul>
 <li>In the PyCharm terminal, run:
-     <code>bash
-     source .venv/bin/activate</code></li>
-</ol>
+     <code>source .venv/bin/activate</code></li>
+</ul>
 <h1 id="step-4-install-mkdocs-and-the-necessary-packages">Step 4: Install MkDocs and the necessary packages</h1>
-<ol>
-<li><strong>Install via pip:</strong></li>
-<li>Run the following in the terminal:
-     <code>bash
-     pip install mkdocs mkdocs-material</code>
-   ➤ If needed, specify the version with:
-     <code>bash
-     pip3.13 install mkdocs mkdocs-material</code></li>
+<p><strong>Install via pip:</strong></p>
+<ul>
+<li>Run the following in the terminal: <code>pip install mkdocs mkdocs-material</code></li>
+</ul>
+<p>➤ If needed, specify the version with: <code>pip3.13 install mkdocs mkdocs-material</code></p>
+<ul>
 <li>Alternatively, use the "Packages" toolbar in PyCharm.</li>
-</ol></div>
+</ul></div>
             </div>
         </div>
 

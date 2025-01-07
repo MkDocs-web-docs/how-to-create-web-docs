@@ -106,23 +106,24 @@
                     <div class="col-md-9" role="main">
 
 <h1 id="step-8-deploy-documentation-to-github-pages">Step 8: Deploy Documentation to GitHub Pages</h1>
-<ol>
-<li><strong>Build and preview the documentation</strong> using the MkDocs built-in web server:  </li>
-<li>Run the following command in the terminal:<br />
-<img alt="MkDocs serve command.png" src="../image/Deploy%20and%20Customize%20MkDocs/Deploy%20documentation%20to%20GitHub%20Pages/MkDocs%20serve%20command.png" />
-   <code>mkdocs serve</code>
+<h4 id="build-and-preview-the-documentation-using-the-mkdocs-built-in-web-server"><strong>Build and preview the documentation</strong> using the MkDocs built-in web server:</h4>
+<ul>
+<li>Run the following command in the terminal: <code>mkdocs serve</code></li>
+</ul>
+<p><img alt="MkDocs serve command.png" src="../image/Deploy%20and%20Customize%20MkDocs/Deploy%20documentation%20to%20GitHub%20Pages/MkDocs%20serve%20command.png" />
    The site will be available locally for testing.
 <img alt="MkDocs local link.png" src="../image/Deploy%20and%20Customize%20MkDocs/Deploy%20documentation%20to%20GitHub%20Pages/MkDocs%20local%20link.png" />
-<img alt="Site local.png" src="../image/Deploy%20and%20Customize%20MkDocs/Deploy%20documentation%20to%20GitHub%20Pages/Site%20local.png" />
-➤ The site will automatically reload when you make changes in PyCharm.
-➤ To stop the server, press Ctrl+C on your keyboard.</li>
-<li><strong>Deploy to GitHub Pages:</strong></li>
-<li>Run the mkdocs gh-deploy command in the terminal.
-<img alt="MkDocs deploy link.png" src="../image/Deploy%20and%20Customize%20MkDocs/Deploy%20documentation%20to%20GitHub%20Pages/MkDocs%20deploy%20link.png" />
-➤ This command creates a gh-pages branch, adds the compiled site to it, and pushes it to GitHub.
-➤ The generated URL will look like this:
-https://[username].github.io/[repository-name]</li>
-</ol>
+<img alt="Site local.png" src="../image/Deploy%20and%20Customize%20MkDocs/Deploy%20documentation%20to%20GitHub%20Pages/Site%20local.png" /></p>
+<p>➤ The site will automatically reload when you make changes in PyCharm.</p>
+<p>➤ To stop the server, press Ctrl+C on your keyboard.</p>
+<h4 id="deploy-to-github-pages"><strong>Deploy to GitHub Pages:</strong></h4>
+<ul>
+<li>Run the <code>mkdocs gh-deploy</code> command in the terminal.
+<img alt="MkDocs deploy link.png" src="../image/Deploy%20and%20Customize%20MkDocs/Deploy%20documentation%20to%20GitHub%20Pages/MkDocs%20deploy%20link.png" /></li>
+</ul>
+<p>➤ This command creates a gh-pages branch, adds the compiled site to it, and pushes it to GitHub.</p>
+<p>➤ The generated URL will look like this:
+https://[username].github.io/[repository-name]</p>
 <h1 id="step-9-edit-the-appearance-of-your-site">Step 9: Edit the Appearance of Your Site</h1>
 <ol>
 <li><strong>Create the <code>extra.css</code> file</strong> in the <code>docs</code> folder.
@@ -132,56 +133,56 @@ https://[username].github.io/[repository-name]</li>
 <li><strong>Add your custom styles</strong> to the <code>extra.css</code> file.<br />
    For example, in my case:</li>
 </ol>
-<p>```css
-   /<em> Header styles </em>/
-   .navbar.bg-primary {
-       background-image: none !important;
-       background-color: #2d6da7 !important;
-   }</p>
-<p>/<em> Removing the default footer </em>/
-   footer {
-       display: none !important;
-   }</p>
-<p>/<em> Styles for the navigation bar </em>/
-   .navbar .nav-link {
-       color: #F8F9FA !important; /<em> Text color for the navigation bar </em>/
-   }</p>
-<p>.navbar .nav-link:hover {
-       color: #d3d9dA !important; /<em> Hover text color for the navigation bar </em>/
-   }
-<img alt="yaml_theme.png" src="../image/Deploy%20and%20Customize%20MkDocs/Edit%20the%20appearance%20of%20our%20site/yaml_theme.png" />
+<pre><code class="language-css">/* Header styles */
+.navbar.bg-primary {
+    background-image: none !important;
+    background-color: #2d6da7 !important;
+}
+
+/* Removing the default footer */
+footer {
+    display: none !important;
+}
+
+/* Styles for the navigation bar */
+.navbar .nav-link {
+    color: #F8F9FA !important; /* Text color for the navigation bar */
+}
+
+.navbar .nav-link:hover {
+    color: #d3d9dA !important; /* Hover text color for the navigation bar */
+}
+</code></pre>
+<p><img alt="yaml_theme.png" src="../image/Deploy%20and%20Customize%20MkDocs/Edit%20the%20appearance%20of%20our%20site/yaml_theme.png" />
 4.  Write in our configuration (mkdocs.yml) the styling theme (in my case, it is “mkdocs”) and localization (for example, ru).</p>
 <p>➤   Localization is written to translate default elements, for example, pagination.</p>
 <h1 id="step-10-committing-sources-and-sending-to-the-git-repository">Step 10: Committing Sources and Sending to the Git Repository</h1>
 <p>Follow these commands in sequence:</p>
-<ol>
-<li><strong>Adding files to the staging area:</strong>
-   <code>git add .</code></li>
+<p><strong>Adding files to the staging area:</strong> <code>git add .</code></p>
+<ul>
 <li>This command adds all files and changes in the current directory (indicated by the <code>.</code>) to the staging area. It means you tell Git which files should be included in the next commit.</li>
-<li>
-<p>If you need to add files from a specific folder (e.g., <code>docs</code>), use:</p>
-<p><code>git add docs/</code>
- or
-  <code>git add ./docs</code>
-   The choice depends on your preference, but both are valid.
-2. Creating a commit with a message:
-  <code>git commit -m "Description of changes"</code>
-   * This command saves the changes from the staging area to the repository with a message.
-   * If you don't use the -m flag, Git will open a text editor for you to write the description manually.
-<strong>Example:</strong>
-  <code>git commit -m "Added documentation files"</code>
-3.  Pushing changes to the remote repository:
-  <code>git push origin main</code>
-- This command sends (pushes) changes from your local repository to the remote repository (e.g., GitHub).
-- <code>origin</code> is the name of the remote repository (default).
-- <code>main</code> is the name of the branch where the changes are pushed. If your branch is named differently (e.g., <code>master</code>), replace <code>main</code> with the name of your branch.</p>
-</li>
-</ol>
-<p>Now you can view the committed changes by visiting the following link: <a href="#">GitHub Repository</a></p>
-<p>Adjustments Made:
-1.  Explained the meaning of the dot (.) as a reference to the current directory.
-2.  Added alternative commands for adding files from specific folders (git add ./docs and git add docs/).
-3.  Emphasized the logic behind each command for better understanding.</p></div>
+<li>If you need to add files from a specific folder (e.g., <code>docs</code>), use: <code>git add docs/</code> or <code>git add ./docs</code></li>
+</ul>
+<p>The choice depends on your preference, but both are valid.</p>
+<p><strong>Creating a commit with a message:</strong> <code>git commit -m "Description of changes"</code></p>
+<ul>
+<li>This command saves the changes from the staging area to the repository with a message.</li>
+<li>If you don't use the -m flag, Git will open a text editor for you to write the description manually.</li>
+</ul>
+<p><em>Example:</em> <code>git commit -m "Added documentation files"</code></p>
+<p><strong>Pushing changes to the remote repository:</strong> <code>git push origin main</code></p>
+<ul>
+<li>This command sends (pushes) changes from your local repository to the remote repository (e.g., GitHub).</li>
+<li><code>origin</code> is the name of the remote repository (default).</li>
+<li><code>main</code> is the name of the branch where the changes are pushed. If your branch is named differently (e.g., <code>master</code>), replace <code>main</code> with the name of your branch.</li>
+</ul>
+<p>Now you can view the committed changes by visiting the following link: <a href="https://github.com/MkDocs-web-docs/how-to-create-web-docs/tree/main">GitHub Repository</a></p>
+<p><strong>Adjustments Made:</strong></p>
+<ol>
+<li>Explained the meaning of the dot (.) as a reference to the current directory.</li>
+<li>Added alternative commands for adding files from specific folders (git add ./docs and git add docs/).</li>
+<li>Emphasized the logic behind each command for better understanding.</li>
+</ol></div>
             </div>
         </div>
 
