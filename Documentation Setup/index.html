@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="ru" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Documentation Setup - Web-docs using MkDocs</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../css/brands.min.css" rel="stylesheet">
+        <link href="../css/solid.min.css" rel="stylesheet">
+        <link href="../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <link href="../extra.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">Web-docs using MkDocs</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href=".." class="nav-link">Creating a web manual using MkDocs</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Links/" class="nav-link">Links</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Project%20Setup/" class="nav-link">Project Setup</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="./" class="nav-link active" aria-current="page">Documentation Setup</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Deploy%20and%20Customize%20MkDocs/" class="nav-link">Deploy and Customize</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Поиск
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../Project%20Setup/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Назад
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../Deploy%20and%20Customize%20MkDocs/" class="nav-link">
+                                    Вперед <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Содержание">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#step-5-create-mkdocs-configuration-mkdocsyml" class="nav-link">Step 5: Create MkDocs Configuration (mkdocs.yml)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#step-6-create-documentation-in-markdown-format" class="nav-link">Step 6: Create Documentation in Markdown Format</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#basics-of-writing-text-in-markdown" class="nav-link">Basics of writing text in Markdown</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#step-7-complete-the-structure-of-your-project" class="nav-link">Step 7: Complete the Structure of Your Project</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="step-5-create-mkdocs-configuration-mkdocsyml">Step 5: Create MkDocs Configuration (mkdocs.yml)</h1>
+<ol>
+<li><strong>Create the <code>mkdocs.yml</code> file</strong>:</li>
+<li>In the root of the project, right-click the folder and choose "Create File".</li>
+<li>In the window that appears, enter the filename <code>mkdocs.yml</code>.
+<img alt="create yaml.png" src="../image/Documentation%20Setup/Create%20MkDocs%20configuration%20%28mkdocs_yml%29/create%20yaml.png" />
+   ➤ To create a Yaml file, just add the <code>.yml</code> extension to the file name.</li>
+<li>Add the file to Git.
+<img alt="add to git.png" src="../image/Documentation%20Setup/Create%20MkDocs%20configuration%20%28mkdocs_yml%29/add%20to%20git.png" />
+   ➤ After this step, you will have a <code>mkdocs.yml</code> file in your project tree.</li>
+</ol>
+<h1 id="step-6-create-documentation-in-markdown-format">Step 6: Create Documentation in Markdown Format</h1>
+<ol>
+<li><strong>Create a <code>docs</code> folder</strong> for storing the source text files.</li>
+<li><strong>Create an <code>image</code> folder</strong> for storing images.</li>
+</ol>
+<p>As a result, your project structure will be scalable and look like this:</p>
+<p>Web-docs/ # Parent directory </p>
+<pre><code>├── .venv/ # Virtual environment of the project 
+├── docs/ # Documentation source files 
+├── image/ # Documentation images 
+├── mkdocs.yml # MkDocs configuration file
+</code></pre>
+<p>Next, within the <code>docs</code> folder, create your first Markdown file.
+<img alt="First docs file.png" src="../image/Documentation%20Setup/Create%20documentation%20in%20Markdown%20format/First%20docs%20file.png" />
+➤ To create a Markdown file, just add the <code>.md</code> extension to the filename and start adding content according to the rules described below.</p>
+<h2 id="basics-of-writing-text-in-markdown">Basics of writing text in Markdown</h2>
+<p>Markdown is a simple markup language for formatting text. It allows you to create structured text using simple symbols.<br />
+Here are the main features:</p>
+<ol>
+<li><strong>Headings</strong><br />
+   Use the <code>#</code> symbol to create headings of different levels. The more <code>#</code> symbols, the lower the heading level.<br />
+   Example:
+   ```markdown
+   # Heading Level 1
+   ## Heading Level 2
+   ### Heading Level 3</li>
+<li><strong>Paragraphs and Line Breaks</strong></li>
+<li>To separate paragraphs, leave a blank line.</li>
+<li>To force a line break, add two spaces at the end of a line.</li>
+</ol>
+<p><strong>Example:</strong></p>
+<pre><code class="language-markdown">This is the first paragraph.
+
+This is the second paragraph.
+And this is the second line without a paragraph.
+</code></pre>
+<ol>
+<li><strong>Text Formatting</strong></li>
+<li>Bold: Wrap text in double asterisks (<strong>) or double underscores (__).
+</strong>Example:**</li>
+</ol>
+<pre><code class="language-markdown">**Bold text**
+__Bold text__
+</code></pre>
+<ul>
+<li>Italics: Wrap text in single asterisks (<em>) or single underscores (_).
+</em><em>Example:</em>*</li>
+</ul>
+<pre><code class="language-markdown">*Italics*
+_Italics_
+</code></pre>
+<ul>
+<li>Strikethrough: Use double tildes (~~).
+<strong>Example:</strong></li>
+</ul>
+<pre><code class="language-markdown">~~Strikethrough text~~
+</code></pre>
+<ol>
+<li><strong>Lists</strong></li>
+<li>Bulleted list: Use -, <em>, or +.
+</em><em>Example:</em>*</li>
+</ol>
+<pre><code class="language-markdown">- Item 1
+- Item 2
+  - Sub-item
+  ```
+* Numbered list: Use numbers with a period.
+**Example:**
+```markdown 
+1. First
+2. Second
+</code></pre>
+<ol>
+<li><strong>Links</strong></li>
+</ol>
+<pre><code class="language-markdown">[Link text](URL)
+</code></pre>
+<ol>
+<li><strong>Images</strong></li>
+</ol>
+<pre><code class="language-markdown">![Image name](../image/1_structure_project.png)
+</code></pre>
+<p>➤ To add an image, you don’t need to specify the path manually. Just drag the image from the left menu to the desired location, and PyCharm will automatically generate the path.
+<img alt="drug-n-drop image.png" src="../image/Documentation%20Setup/Create%20documentation%20in%20Markdown%20format/drug-n-drop%20image.png" />
+➤ PyCharm has three document display modes, including a preview with images.
+<img alt="Preview .png" src="../image/Documentation%20Setup/Create%20documentation%20in%20Markdown%20format/Preview%20.png" />
+7.  <strong>Code</strong>
+* Inline code: Wrap the text in backticks (`).
+<strong>Example:</strong></p>
+<pre><code class="language-markdown">`python -m venv .venv`
+</code></pre>
+<ul>
+<li>Code block: Wrap the text in triple backticks (`````) followed by the language.
+<strong>Example:</strong></li>
+</ul>
+<pre><code class="language-markdown">
+```print(&quot;Hello, World!&quot;)```
+
+</code></pre>
+<ol>
+<li><strong>Tables</strong>
+Create tables using vertical bars (|) and hyphens (-).
+<strong>Example:</strong></li>
+</ol>
+<pre><code class="language-markdown">| Heading 1 | Heading 2 |
+|-----------|-----------|
+| Text 1    | Text 2    |
+</code></pre>
+<ol>
+<li><strong>Note</strong>
+Use the <code>&gt;</code> symbol to create notes.
+<strong>Example:</strong></li>
+</ol>
+<pre><code class="language-markdown">&gt; Note: Always test your code before deploying.
+</code></pre>
+<blockquote>
+<p>In some cases, the numbering may be broken. To fix this, I use HTML to continue the numbering:</p>
+</blockquote>
+<pre><code>&lt;ol start=&quot;5&quot;&gt;
+  &lt;li&gt;Links:&lt;/li&gt;
+  &lt;a href=&quot;URL&quot;&gt;Link text&lt;/a&gt;
+&lt;/ol&gt;
+</code></pre>
+<h1 id="step-7-complete-the-structure-of-your-project">Step 7: Complete the Structure of Your Project</h1>
+<ol>
+<li>In the source folder, create the file <code>index.md</code> — the text of this document will be displayed on the home page of the site.
+<img alt="Create index_md.png" src="../image/Documentation%20Setup/Complete%20the%20structure%20of%20your%20project/Create%20index_md.png" /></li>
+<li>Create the <code>.gitignore</code> file in the root of the project and write <code>site</code> in it — this will prevent Git from tracking the compiled files.
+<img alt="Gitignore.png" src="../image/Documentation%20Setup/Complete%20the%20structure%20of%20your%20project/Gitignore.png" />
+➤ The "site" folder will be automatically generated during deployment.</li>
+</ol>
+<p>Now, your project structure looks like this:</p>
+<pre><code>Web-docs/  # Parent directory
+├── .venv/  # Virtual environment
+├── docs/  # Documentation source files
+    ├── index.md/  # Home page
+├── image/  # Documentation images
+├── mkdocs.yml  # MkDocs configuration file
+├── .gitignore  # Ignored files
+</code></pre></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Документация создана с помощью <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js"></script>
+        <script src="../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Поиск</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+            </div>
+            <div class="modal-body">
+                <p>Чтобы воспользоваться поиском по документам, введите поисковый запрос ниже.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Поиск..." id="mkdocs-search-query" title="Введите поисковый запрос">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="Ничего не найдено"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Сочетания клавиш</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Клавиши</th>
+                    <th>Действие</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Открыть справку</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Следующая страница</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Предыдущая страница</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Поиск</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
