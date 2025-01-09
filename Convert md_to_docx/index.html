@@ -6,9 +6,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         
-        <link rel="canonical" href="https://MkDocs-web-docs.github.io/how-to-create-web-docs/Links/">
+        <link rel="canonical" href="https://MkDocs-web-docs.github.io/how-to-create-web-docs/Convert%20md_to_docx/">
         <link rel="shortcut icon" href="../img/favicon.ico">
-        <title>Links - Web-docs using MkDocs</title>
+        <title>Convert md to docx - Web-docs using MkDocs</title>
         <link href="../css/bootstrap.min.css" rel="stylesheet">
         <link href="../css/fontawesome.min.css" rel="stylesheet">
         <link href="../css/brands.min.css" rel="stylesheet">
@@ -39,7 +39,7 @@
                                 <a href=".." class="nav-link">Creating a web manual using MkDocs</a>
                             </li>
                             <li class="nav-item">
-                                <a href="./" class="nav-link active" aria-current="page">Links</a>
+                                <a href="../Links/" class="nav-link">Links</a>
                             </li>
                             <li class="nav-item">
                                 <a href="../Project%20Setup/" class="nav-link">Project Setup</a>
@@ -51,7 +51,7 @@
                                 <a href="../Deploy%20and%20Customize%20MkDocs/" class="nav-link">Deploy and Customize</a>
                             </li>
                             <li class="nav-item">
-                                <a href="../Convert%20md_to_docx/" class="nav-link">Convert md to docx</a>
+                                <a href="./" class="nav-link active" aria-current="page">Convert md to docx</a>
                             </li>
                         </ul>
 
@@ -62,12 +62,12 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="prev" href=".." class="nav-link">
+                                <a rel="prev" href="../Deploy%20and%20Customize%20MkDocs/" class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" href="../Project%20Setup/" class="nav-link">
+                                <a rel="next" class="nav-link disabled">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -89,7 +89,7 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-bs-level="1"><a href="#links" class="nav-link">Links</a>
+            <li class="nav-item" data-bs-level="1"><a href="#convert-markdown-to-word-with-pandoc" class="nav-link">Convert Markdown to Word with Pandoc</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -98,14 +98,52 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="links">Links</h1>
+<h1 id="convert-markdown-to-word-with-pandoc">Convert Markdown to Word with Pandoc</h1>
+<p>Let's look at how to convert Markdown (.md) files to Word (.docx) using Pandoc.</p>
+<blockquote>
+<p>Pandoc is a command-line tool and does not have a graphical interface.</p>
+</blockquote>
+<p>At first check if Pandoc is installed on your computer:</p>
 <ul>
-<li>This guide is based on the official MkDocs documentation – visit the <a href="https://www.mkdocs.org/">https://www.mkdocs.org/</a>.</li>
-<li>If you have any questions, feel free to contact me via email: tedkuzmina@gmail.com.</li>
-<li>Please leave your feedback or suggestions about this document <a href="https://www.linkedin.com/in/tatiana-kuzmina1987/">My LinkedInn</a>.</li>
-<li>You can view the result of our work <a href="https://mkdocs-web-docs.github.io/how-to-create-web-docs/">Our site</a>.</li>
-<li>The source files are available <a href="https://github.com/MkDocs-web-docs/how-to-create-web-docs/tree/main">My GitHub</a>.</li>
-</ul></div>
+<li>Open a terminal and run the command: <code>brew info pandoc</code></li>
+</ul>
+<p>If the response says <code>not installed</code>, then Pandoc is not installed.</p>
+<h3 id="install-pandoc">Install Pandoc</h3>
+<p>To install Pandoc, run the following command in the terminal: <code>brew install pandoc</code></p>
+<blockquote>
+<p><strong>Pandoc</strong> is written in <strong>Haskell</strong> and is installed via <strong>brew</strong>, not <strong>pip</strong>. <br />
+There is a <strong>Python</strong> wrapper called <strong>pypandoc</strong>, but it wraps <strong>Pandoc</strong>.</p>
+</blockquote>
+<h3 id="basics-of-working-with-pandoc">Basics of working with Pandoc</h3>
+<p>After installation, check Pandoc help to get acquainted with its capabilities: <code>pandoc --help</code></p>
+<p><img alt="pandoc --help result.png" src="../image/pandoc/pandoc%20--help%20result.png" /></p>
+<p>Command structure:</p>
+<ul>
+<li>Enter the command pandoc.</li>
+<li>Specify the required options (the list can be found in the help).</li>
+<li>Upload files for conversion.</li>
+</ul>
+<h3 id="convert-markdown-files-to-word">Convert Markdown files to Word</h3>
+<p>For example, we will convert Markdown files to Word.</p>
+<p>To perform the conversion, use the following command:</p>
+<p><code>pandoc -f markdown -t docx -o &lt;path_to_result.docx&gt; &lt;path_to_source.md&gt;</code></p>
+<p>Explanation of command parameters:</p>
+<p><code>-f markdown</code> – source file format (Markdown).
+<code>-t docx</code> – result format (Word).
+<code>-o</code> – path and name of the resulting file.</p>
+<p><strong>Example command:</strong>
+<code>pandoc -f markdown -t docx -o 'docs/Project Setup.docx' docs/Project\ Setup.md</code></p>
+<blockquote>
+<p>Note that in the shell we need to specify a backslash for the md file name so that the terminal will read the command as one argument. You can also wrap the entire document in quotes.</p>
+</blockquote>
+<p>If the file name contains spaces, note:</p>
+<ul>
+<li>Use a backslash \ to indicate a space (e.g. <code>Project\ Setup.md</code>).</li>
+<li>Or wrap the file name in quotes (e.g. <code>Project Setup.md</code>).</li>
+</ul>
+<blockquote>
+<p>Use Tab to autocomplete file names in the terminal - this will also automatically add the necessary slashes.</p>
+</blockquote></div>
             </div>
         </div>
 

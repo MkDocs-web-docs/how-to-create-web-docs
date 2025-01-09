@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru" data-bs-theme="light">
+<html lang="en" data-bs-theme="light">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -50,22 +50,25 @@
                             <li class="nav-item">
                                 <a href="./" class="nav-link active" aria-current="page">Deploy and Customize</a>
                             </li>
+                            <li class="nav-item">
+                                <a href="../Convert%20md_to_docx/" class="nav-link">Convert md to docx</a>
+                            </li>
                         </ul>
 
                     <ul class="nav navbar-nav ms-md-auto">
                         <li class="nav-item">
                             <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
-                                <i class="fa fa-search"></i> Поиск
+                                <i class="fa fa-search"></i> Search
                             </a>
                         </li>
                             <li class="nav-item">
                                 <a rel="prev" href="../Documentation%20Setup/" class="nav-link">
-                                    <i class="fa fa-arrow-left"></i> Назад
+                                    <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" class="nav-link disabled">
-                                    Вперед <i class="fa fa-arrow-right"></i>
+                                <a rel="next" href="../Convert%20md_to_docx/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
                     </ul>
@@ -77,7 +80,7 @@
             <div class="row">
                     <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
     <div class="navbar-header">
-        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Содержание">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
             <span class="fa fa-angle-down"></span>
         </button>
     </div>
@@ -188,7 +191,7 @@ footer {
 
         <footer class="col-md-12">
             <hr>
-            <p>Документация создана с помощью <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
         </footer>
         <script src="../js/bootstrap.bundle.min.js"></script>
         <script>
@@ -202,17 +205,17 @@ footer {
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
-                <h4 class="modal-title" id="searchModalLabel">Поиск</h4>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <p>Чтобы воспользоваться поиском по документам, введите поисковый запрос ниже.</p>
+                <p>From here you can search these documents. Enter your search terms below.</p>
                 <form>
                     <div class="form-group">
-                        <input type="search" class="form-control" placeholder="Поиск..." id="mkdocs-search-query" title="Введите поисковый запрос">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
                     </div>
                 </form>
-                <div id="mkdocs-search-results" data-no-results-text="Ничего не найдено"></div>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
             </div>
             <div class="modal-footer">
             </div>
@@ -222,33 +225,33 @@ footer {
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h4 class="modal-title" id="keyboardModalLabel">Сочетания клавиш</h4>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
               <table class="table">
                 <thead>
                   <tr>
-                    <th style="width: 20%;">Клавиши</th>
-                    <th>Действие</th>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
                     <td class="help shortcut"><kbd>?</kbd></td>
-                    <td>Открыть справку</td>
+                    <td>Open this help</td>
                   </tr>
                   <tr>
                     <td class="next shortcut"><kbd>n</kbd></td>
-                    <td>Следующая страница</td>
+                    <td>Next page</td>
                   </tr>
                   <tr>
                     <td class="prev shortcut"><kbd>p</kbd></td>
-                    <td>Предыдущая страница</td>
+                    <td>Previous page</td>
                   </tr>
                   <tr>
                     <td class="search shortcut"><kbd>s</kbd></td>
-                    <td>Поиск</td>
+                    <td>Search</td>
                   </tr>
                 </tbody>
               </table>
