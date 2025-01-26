@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="https://MkDocs-web-docs.github.io/how-to-create-web-docs/Material%20theme%20for%20MkDocs/" rel="canonical"/>
+<link href="../Convert%20Markdown%20to%20docx/" rel="prev"/>
+<link href="../Glossary/" rel="next"/>
+<link href="../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.5.50" name="generator"/>
+<title>Material theme for MkDocs - Web-docs using MkDocs</title>
+<link href="../assets/stylesheets/main.a40c8224.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body data-md-color-accent="lime" data-md-color-primary="pink" data-md-color-scheme="default" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#setting-up-the-material-theme-for-mkdocs">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header md-header--shadow" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="Web-docs using MkDocs" class="md-header__button md-logo" data-md-component="logo" href=".." title="Web-docs using MkDocs">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            Web-docs using MkDocs
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Material theme for MkDocs
+            
+          </span>
+</div>
+</div>
+</div>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</label>
+<nav aria-label="Search" class="md-search__options">
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" title="Clear" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+</button>
+</nav>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Web-docs using MkDocs" class="md-nav__button md-logo" data-md-component="logo" href=".." title="Web-docs using MkDocs">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+    Web-docs using MkDocs
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="..">
+<span class="md-ellipsis">
+    Creating a web manual using MkDocs
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Links/">
+<span class="md-ellipsis">
+    Links
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Project%20Setup/">
+<span class="md-ellipsis">
+    Project Setup
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Documentation%20Setup/">
+<span class="md-ellipsis">
+    Documentation Setup
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Deploy%20and%20Customize%20MkDocs/">
+<span class="md-ellipsis">
+    Deploy and Customize
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Convert%20Markdown%20to%20docx/">
+<span class="md-ellipsis">
+    Convert Markdown to docx
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    Material theme for MkDocs
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    Material theme for MkDocs
+  </span>
+</a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#reconfiguring-a-virtual-environment">
+<span class="md-ellipsis">
+      Reconfiguring a virtual environment
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mkdocs-configuration">
+<span class="md-ellipsis">
+      MkDocs Configuration
+    </span>
+</a>
+<nav aria-label="MkDocs Configuration" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#basic-settings">
+<span class="md-ellipsis">
+      Basic settings
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#navigation">
+<span class="md-ellipsis">
+      Navigation
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#theme-settings">
+<span class="md-ellipsis">
+      Theme settings
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#plugins">
+<span class="md-ellipsis">
+      Plugins
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#markdown-extensions">
+<span class="md-ellipsis">
+      Markdown Extensions
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#adding-tooltips">
+<span class="md-ellipsis">
+      Adding tooltips
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#removing-the-footer">
+<span class="md-ellipsis">
+      Removing the footer
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#changing-the-color-scheme">
+<span class="md-ellipsis">
+      Changing the color scheme
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Glossary/">
+<span class="md-ellipsis">
+    Glossary
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#reconfiguring-a-virtual-environment">
+<span class="md-ellipsis">
+      Reconfiguring a virtual environment
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mkdocs-configuration">
+<span class="md-ellipsis">
+      MkDocs Configuration
+    </span>
+</a>
+<nav aria-label="MkDocs Configuration" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#basic-settings">
+<span class="md-ellipsis">
+      Basic settings
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#navigation">
+<span class="md-ellipsis">
+      Navigation
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#theme-settings">
+<span class="md-ellipsis">
+      Theme settings
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#plugins">
+<span class="md-ellipsis">
+      Plugins
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#markdown-extensions">
+<span class="md-ellipsis">
+      Markdown Extensions
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#adding-tooltips">
+<span class="md-ellipsis">
+      Adding tooltips
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#removing-the-footer">
+<span class="md-ellipsis">
+      Removing the footer
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#changing-the-color-scheme">
+<span class="md-ellipsis">
+      Changing the color scheme
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset"><a class="md-content__button md-icon" download="Material theme for MkDocs.pdf" href="../Material theme for MkDocs/index.pdf" title="Save to PDF"><html><body><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m14 2 6 6v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm4 18V9h-5V4H6v16zm-6-1-4-4h2.5v-3h3v3H16z"></path></svg></body></html></a>
+<h1 id="setting-up-the-material-theme-for-mkdocs">Setting up the Material theme for MkDocs</h1>
+<blockquote>
+<p>Enhance your document with the Material theme.</p>
+</blockquote>
+<p>In this tutorial, we'll cover how to:</p>
+<ol>
+<li>Set up tooltips with definitions for concepts.</li>
+<li>Add a footer.</li>
+<li>Add a PDF export button.</li>
+<li>Set up a site footer.</li>
+<li>Change the site color scheme and add styles.</li>
+</ol>
+<h2 id="reconfiguring-a-virtual-environment">Reconfiguring a virtual environment</h2>
+<p>If you encounter errors while setting up a theme, follow these steps:</p>
+<ol>
+<li>Delete the old virtual environment if you created one.</li>
+<li>
+<p>Create a new one:</p>
+<ul>
+<li>In the IDE panel select <code>Add New Interpreter</code> &gt; <code>Add Local Interpreter</code>.</li>
+<li>Specify the settings and confirm.</li>
+</ul>
+<p><img alt="New enviropment.png" src="../image/Material%20theme%20for%20MkDocs/New%20enviropment.png"/></p>
+</li>
+<li>
+<p>Activate the environment: <code>source venv/bin/activate</code></p>
+</li>
+<li>
+<p>Add a <code>requirements.txt</code> file to the root of the project with the following content:</p>
+<ul>
+<li>mkdocs </li>
+<li>mkdocs-material </li>
+<li>mkdocs-exporter</li>
+</ul>
+<p><img alt="requiremets_txt_file.png" src="../image/Material%20theme%20for%20MkDocs/requiremets_txt_file.png"/></p>
+<blockquote>
+<p>Why this file? It simplifies dependency management, allowing you to quickly install all the necessary libraries with a single command.</p>
+</blockquote>
+</li>
+<li>
+<p>Install dependencies: <code>pip install -r requirements.txt</code></p>
+</li>
+<li>If the <code>mkdocs-exporter</code> library is not installed, run the command <code>pip install mkdocs-exporter</code>.</li>
+</ol>
+<h2 id="mkdocs-configuration">MkDocs Configuration</h2>
+<p>This config is suitable for a basic project with an emphasis on interface customization (color scheme, custom footer) and support for exporting documentation to PDF.
+Here is the <code>mkdocs.yml</code> configuration file with explanations:</p>
+<h3 id="basic-settings">Basic settings</h3>
+<pre><code class="language-yaml">site_name: Web-docs using MkDocs
+site_url: https://MkDocs-web-docs.github.io/how-to-create-web-docs/
+</code></pre>
+<ul>
+<li><strong>site_name:</strong> The name of your documentation site. It appears in the browser title and site header.</li>
+<li><strong>site_url:</strong> The base URL for generating links when building a static site.</li>
+</ul>
+<h3 id="navigation">Navigation</h3>
+<pre><code class="language-yaml">nav:
+  - Creating a web manual using MkDocs: index.md
+  - Links: Links.md
+  - Project Setup: Project Setup.md
+  - Documentation Setup: Documentation Setup.md
+  - Deploy and Customize: Deploy and Customize MkDocs.md
+  - Convert Markdown to docx: Convert Markdown to docx.md
+  - Glossary: Glossary.md
+</code></pre>
+<blockquote>
+<p>Navigation defines the menu structure. Each line links the section title to a Markdown file.</p>
+</blockquote>
+<h3 id="theme-settings">Theme settings</h3>
+<pre><code class="language-yaml">theme:
+  palette:
+    primary: pink
+    accent: lime
+  name: material
+  custom_dir: overrides
+  language: en
+  features:
+    - navigation.instant
+    - header.autohide
+    - content.tooltips
+  hide:
+    - footer
+</code></pre>
+<ul>
+<li><strong>palette:</strong> sets the color scheme. <ul>
+<li><strong>primary:</strong> the main color (e.g. header and buttons). </li>
+<li><strong>accent:</strong> accent color (e.g. links).</li>
+</ul>
+</li>
+<li><strong>custom_dir:</strong> specifies the folder with custom templates (e.g. for changing the footer). </li>
+<li><strong>features:</strong><ul>
+<li><strong>navigation.instant:</strong> instant navigation without reloading the page. </li>
+<li><strong>header.autohide:</strong> hide the header when scrolling down. </li>
+<li><strong>content.tooltips:</strong> improved tooltips for the title attribute.</li>
+</ul>
+</li>
+<li><strong>hide.footer:</strong> hides the standard footer.</li>
+</ul>
+<h3 id="plugins">Plugins</h3>
+<pre><code class="language-yaml">plugins:
+  - exporter:
+      formats:
+        pdf:
+          enabled: true
+          aggregator:
+            enabled: true
+            output: documentation.pdf
+            covers: all
+      buttons:
+        - title: Сохранить в PDF
+          icon: material-file-download-outline
+  - search
+</code></pre>
+<ul>
+<li><strong>exporter:</strong> adds PDF export functionality. The button with the text "Save to PDF" will be available on the site.</li>
+<li><strong>search:</strong> enables built-in search.</li>
+</ul>
+<h3 id="markdown-extensions">Markdown Extensions</h3>
+<pre><code class="language-yaml">markdown_extensions:
+  - abbr
+  - attr_list
+  - pymdownx.snippets
+</code></pre>
+<ul>
+<li><strong>abbr:</strong> allows you to specify abbreviations.</li>
+<li><strong>attr_list:</strong> adds attribute support for Markdown elements.</li>
+<li><strong>pymdownx.snippets:</strong> allows you to reuse certain Markdown blocks.</li>
+</ul>
+<h3 id="adding-tooltips">Adding tooltips</h3>
+<ol>
+<li>Add the following configuration to your mkdocs.yml file to enable tooltips:
+    <code>yaml
+    theme:
+      features:
+        - content.tooltips</code></li>
+<li>
+<p>Add the title attribute to the Markdown text:<br/>
+<strong>Example:</strong><br/>
+<code>markdown
+    [Ctrl+C](# "A keyboard shortcut used to stop a terminal process")</code><br/>
+    This code will add a tooltip when you hover over a concept, and it will display its definition.
+    <img alt="atribut title.png" src="../image/Material%20theme%20for%20MkDocs/atribut%20title.png"/></p>
+<blockquote>
+<p>The title attribute will not work inside a code block.</p>
+</blockquote>
+</li>
+<li>
+<p>Check the result.<br/>
+When you run the site with mkdocs serve, you will be able to see the tooltip that appears when you hover over <code>Ctrl+C</code>.</p>
+</li>
+</ol>
+<blockquote>
+<p>Tooltip display is not shown in PyCharm preview</p>
+</blockquote>
+<h3 id="removing-the-footer">Removing the footer</h3>
+<p>Next, remove the footer if necessary.
+The instructions indicate a simple method, which is described <a href="https://squidfunk.github.io/mkdocs-material/setup/setting-up-the-footer/">here</a>.  </p>
+<p>If the standard method did not work, use the Material theme customization:</p>
+<ol>
+<li>Create an overrides folder: <code>mkdir overrides</code></li>
+<li>Create a footer.html file: 
+    <code>mkdir -p overrides/partials</code>
+<code>echo "" &gt; overrides/partials/footer.html</code></li>
+<li>In the config, specify the custom_dir directory:</li>
+</ol>
+<pre><code class="language-yaml">theme:
+  name: material 
+  custom_dir: overrides
+</code></pre>
+<p>Now the footer will be completely removed.</p>
+<h3 id="changing-the-color-scheme">Changing the color scheme</h3>
+<p>To change the colors, use the instructions <a href="https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/">Changing the colors</a>. </p>
+<p>In the config, change the parameters palette:</p>
+<blockquote>
+<p>My example is pink)</p>
+</blockquote>
+<pre><code class="language-yaml">palette:
+  primary: pink
+  accent: lime
+</code></pre>
+<blockquote>
+<p>The material is an amazing theme with very clear and concise instructions. Imagine that from boring Word you can now create beautiful web documents simply and easily.</p>
+</blockquote>
+<p>For take this example, you can just copy this config:
+<img alt="result.png" src="../image/Material%20theme%20for%20MkDocs/result.png"/></p>
+<pre><code class="language-yaml">site_name: Web-docs using MkDocs
+site_url: https://MkDocs-web-docs.github.io/how-to-create-web-docs/
+
+nav:
+  - Creating a web manual using MkDocs: index.md
+  - Links: Links.md
+  - Project Setup: Project Setup.md
+  - Documentation Setup: Documentation Setup.md
+  - Deploy and Customize: Deploy and Customize MkDocs.md
+  - Convert Markdown to docx: Convert Markdown to docx.md
+  - Material theme for MkDocs: Material theme for MkDocs.md
+  - Glossary: Glossary.md
+
+theme:
+  palette:
+    primary: pink
+    accent: lime
+  name: material
+  custom_dir: overrides
+  language: en
+  features:
+    - navigation.instant
+    - header.autohide
+    - content.tooltips
+  hide:
+    - footer
+
+plugins:
+  - exporter:
+      formats:
+        pdf:
+          enabled: true
+          aggregator:
+            enabled: true
+            output: documentation.pdf
+            covers: all
+      buttons:
+        - title: Save to PDF
+          icon: material-file-download-outline
+          enabled: !!python/name:mkdocs_exporter.formats.pdf.buttons.download.enabled
+          attributes: !!python/name:mkdocs_exporter.formats.pdf.buttons.download.attributes
+  - search
+
+markdown_extensions:
+  - abbr
+  - attr_list
+  - pymdownx.snippets
+
+extra: {}
+</code></pre>
+<p>Now our project structure looks this:</p>
+<p>how-to-create-web-docs/<br/>
+├── docs/                          # Directory with Markdown documentation files<br/>
+│   ├── Convert Markdown to docx.md<br/>
+│   ├── Deploy and Customize MkDocs.md<br/>
+│   ├── Documentation Setup.md<br/>
+│   ├── extra.css                  # Custom styles (if applicable)<br/>
+│   ├── filelist.txt               # Auxiliary file (e.g. file list)<br/>
+│   ├── Glossary.md              <br/>
+│   ├── index.md                 <br/>
+│   ├── Links.md                 <br/>
+│   ├── Material theme for MkDocs.md<br/>
+│   ├── Project Setup.md         <br/>
+├── image/                         # Image folder<br/>
+├── overrides/                     # Template customization<br/>
+│   ├── partials/                  # Template parts<br/>
+│   │   ├── footer.html            # Custom footer<br/>
+├── site/                          # Generated site (created automatically)<br/>
+├── venv/                          # Python virtual environment<br/>
+├── .gitignore                     # File to exclude from repository<br/>
+├── mkdocs.yml                     # Main MkDocs configuration file<br/>
+├── requirements.txt               # Project dependencies file  </p>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+</main>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "header.autohide", "content.tooltips"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+<script src="../assets/javascripts/bundle.60a45f97.min.js"></script>
+</body>
+</html>

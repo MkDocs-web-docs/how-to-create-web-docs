@@ -2,26 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://MkDocs-web-docs.github.io/how-to-create-web-docs/</loc>
-         <lastmod>2025-01-09</lastmod>
+         <lastmod>2025-01-26</lastmod>
     </url>
     <url>
          <loc>https://MkDocs-web-docs.github.io/how-to-create-web-docs/Convert%20Markdown%20to%20docx/</loc>
-         <lastmod>2025-01-09</lastmod>
+         <lastmod>2025-01-26</lastmod>
     </url>
     <url>
          <loc>https://MkDocs-web-docs.github.io/how-to-create-web-docs/Deploy%20and%20Customize%20MkDocs/</loc>
-         <lastmod>2025-01-09</lastmod>
+         <lastmod>2025-01-26</lastmod>
     </url>
     <url>
          <loc>https://MkDocs-web-docs.github.io/how-to-create-web-docs/Documentation%20Setup/</loc>
-         <lastmod>2025-01-09</lastmod>
+         <lastmod>2025-01-26</lastmod>
+    </url>
+    <url>
+         <loc>https://MkDocs-web-docs.github.io/how-to-create-web-docs/Glossary/</loc>
+         <lastmod>2025-01-26</lastmod>
     </url>
     <url>
          <loc>https://MkDocs-web-docs.github.io/how-to-create-web-docs/Links/</loc>
-         <lastmod>2025-01-09</lastmod>
+         <lastmod>2025-01-26</lastmod>
+    </url>
+    <url>
+         <loc>https://MkDocs-web-docs.github.io/how-to-create-web-docs/Material%20theme%20for%20MkDocs/</loc>
+         <lastmod>2025-01-26</lastmod>
     </url>
     <url>
          <loc>https://MkDocs-web-docs.github.io/how-to-create-web-docs/Project%20Setup/</loc>
-         <lastmod>2025-01-09</lastmod>
+         <lastmod>2025-01-26</lastmod>
     </url>
 </urlset>

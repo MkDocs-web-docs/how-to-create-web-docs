@@ -1,103 +1,308 @@
 <!DOCTYPE html>
-<html lang="en" data-bs-theme="light">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
-        
-        <link rel="canonical" href="https://MkDocs-web-docs.github.io/how-to-create-web-docs/Convert%20Markdown%20to%20docx/">
-        <link rel="shortcut icon" href="../img/favicon.ico">
-        <title>Convert Markdown to docx - Web-docs using MkDocs</title>
-        <link href="../css/bootstrap.min.css" rel="stylesheet">
-        <link href="../css/fontawesome.min.css" rel="stylesheet">
-        <link href="../css/brands.min.css" rel="stylesheet">
-        <link href="../css/solid.min.css" rel="stylesheet">
-        <link href="../css/v4-font-face.min.css" rel="stylesheet">
-        <link href="../css/base.css" rel="stylesheet">
-        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
-        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
-        <link href="../extra.css" rel="stylesheet">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
-        <script>hljs.highlightAll();</script> 
-    </head>
-
-    <body>
-        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
-            <div class="container">
-                <a class="navbar-brand" href="..">Web-docs using MkDocs</a>
-                <!-- Expander button -->
-                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <!-- Expanded navigation -->
-                <div id="navbar-collapse" class="navbar-collapse collapse">
-                        <!-- Main navigation -->
-                        <ul class="nav navbar-nav">
-                            <li class="nav-item">
-                                <a href=".." class="nav-link">Creating a web manual using MkDocs</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="../Links/" class="nav-link">Links</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="../Project%20Setup/" class="nav-link">Project Setup</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="../Documentation%20Setup/" class="nav-link">Documentation Setup</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="../Deploy%20and%20Customize%20MkDocs/" class="nav-link">Deploy and Customize</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="./" class="nav-link active" aria-current="page">Convert Markdown to docx</a>
-                            </li>
-                        </ul>
-
-                    <ul class="nav navbar-nav ms-md-auto">
-                        <li class="nav-item">
-                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
-                                <i class="fa fa-search"></i> Search
-                            </a>
-                        </li>
-                            <li class="nav-item">
-                                <a rel="prev" href="../Deploy%20and%20Customize%20MkDocs/" class="nav-link">
-                                    <i class="fa fa-arrow-left"></i> Previous
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a rel="next" class="nav-link disabled">
-                                    Next <i class="fa fa-arrow-right"></i>
-                                </a>
-                            </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="container">
-            <div class="row">
-                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
-    <div class="navbar-header">
-        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
-            <span class="fa fa-angle-down"></span>
-        </button>
-    </div>
-
-    
-    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
-        <ul class="nav flex-column">
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="https://MkDocs-web-docs.github.io/how-to-create-web-docs/Convert%20Markdown%20to%20docx/" rel="canonical"/>
+<link href="../Deploy%20and%20Customize%20MkDocs/" rel="prev"/>
+<link href="../Material%20theme%20for%20MkDocs/" rel="next"/>
+<link href="../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.5.50" name="generator"/>
+<title>Convert Markdown to docx - Web-docs using MkDocs</title>
+<link href="../assets/stylesheets/main.a40c8224.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body data-md-color-accent="lime" data-md-color-primary="pink" data-md-color-scheme="default" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#convert-markdown-to-word-with-pandoc">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header md-header--shadow" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="Web-docs using MkDocs" class="md-header__button md-logo" data-md-component="logo" href=".." title="Web-docs using MkDocs">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            Web-docs using MkDocs
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
             
-            <li class="nav-item" data-bs-level="1"><a href="#convert-markdown-to-word-with-pandoc" class="nav-link">Convert Markdown to Word with Pandoc</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-        </ul>
-    </div>
-</div></div>
-                    <div class="col-md-9" role="main">
-
+              Convert Markdown to docx
+            
+          </span>
+</div>
+</div>
+</div>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</label>
+<nav aria-label="Search" class="md-search__options">
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" title="Clear" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+</button>
+</nav>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Web-docs using MkDocs" class="md-nav__button md-logo" data-md-component="logo" href=".." title="Web-docs using MkDocs">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+    Web-docs using MkDocs
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="..">
+<span class="md-ellipsis">
+    Creating a web manual using MkDocs
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Links/">
+<span class="md-ellipsis">
+    Links
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Project%20Setup/">
+<span class="md-ellipsis">
+    Project Setup
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Documentation%20Setup/">
+<span class="md-ellipsis">
+    Documentation Setup
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Deploy%20and%20Customize%20MkDocs/">
+<span class="md-ellipsis">
+    Deploy and Customize
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    Convert Markdown to docx
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    Convert Markdown to docx
+  </span>
+</a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#install-pandoc">
+<span class="md-ellipsis">
+      Install Pandoc
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#basics-of-working-with-pandoc">
+<span class="md-ellipsis">
+      Basics of working with Pandoc
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#convert-markdown-files-to-word">
+<span class="md-ellipsis">
+      Convert Markdown files to Word
+    </span>
+</a>
+<nav aria-label="Convert Markdown files to Word" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#converting-multiple-markdown-files-into-a-single-docx-file">
+<span class="md-ellipsis">
+      Converting multiple Markdown-files into a single DOCX file
+    </span>
+</a>
+<nav aria-label="Converting multiple Markdown-files into a single DOCX file" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#creating-a-filelisttxt-file">
+<span class="md-ellipsis">
+      Creating a filelist.txt file
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#running-the-command">
+<span class="md-ellipsis">
+      Running the command
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#command-explanation">
+<span class="md-ellipsis">
+      Command Explanation
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Material%20theme%20for%20MkDocs/">
+<span class="md-ellipsis">
+    Material theme for MkDocs
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Glossary/">
+<span class="md-ellipsis">
+    Glossary
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#install-pandoc">
+<span class="md-ellipsis">
+      Install Pandoc
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#basics-of-working-with-pandoc">
+<span class="md-ellipsis">
+      Basics of working with Pandoc
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#convert-markdown-files-to-word">
+<span class="md-ellipsis">
+      Convert Markdown files to Word
+    </span>
+</a>
+<nav aria-label="Convert Markdown files to Word" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#converting-multiple-markdown-files-into-a-single-docx-file">
+<span class="md-ellipsis">
+      Converting multiple Markdown-files into a single DOCX file
+    </span>
+</a>
+<nav aria-label="Converting multiple Markdown-files into a single DOCX file" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#creating-a-filelisttxt-file">
+<span class="md-ellipsis">
+      Creating a filelist.txt file
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#running-the-command">
+<span class="md-ellipsis">
+      Running the command
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#command-explanation">
+<span class="md-ellipsis">
+      Command Explanation
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset"><a class="md-content__button md-icon" download="Convert Markdown to docx.pdf" href="../Convert Markdown to docx/index.pdf" title="Save to PDF"><html><body><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m14 2 6 6v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm4 18V9h-5V4H6v16zm-6-1-4-4h2.5v-3h3v3H16z"></path></svg></body></html></a>
 <h1 id="convert-markdown-to-word-with-pandoc">Convert Markdown to Word with Pandoc</h1>
 <p>Let's look at how to convert Markdown (.md) files to Word (.docx) using Pandoc.</p>
 <blockquote>
@@ -105,18 +310,18 @@
 </blockquote>
 <p>At first check if Pandoc is installed on your computer:</p>
 <ul>
-<li>Open a terminal and run the command: <code>brew info pandoc</code></li>
+<li>Open a <a href="#" title="A program for executing commands in the text interface of the operating system">terminal</a> and run the command: <code>brew info pandoc</code></li>
 </ul>
 <p>If the response says <code>not installed</code>, then Pandoc is not installed.</p>
 <h3 id="install-pandoc">Install Pandoc</h3>
-<p>To install Pandoc, run the following command in the terminal: <code>brew install pandoc</code></p>
+<p>To install Pandoc, run the following command in the <a href="#" title="A program for executing commands in the text interface of the operating system">terminal</a>: <code>brew install pandoc</code></p>
 <blockquote>
-<p><strong>Pandoc</strong> is written in <strong>Haskell</strong> and is installed via <strong>brew</strong>, not <strong>pip</strong>. <br />
+<p><strong>Pandoc</strong> is written in <strong>Haskell</strong> and is installed via <strong><a href="#" title="A package manager for macOS and Linux that allows you to install and manage various command line tools">brew</a></strong>, not <strong>pip</strong>. <br/>
 There is a <strong>Python</strong> wrapper called <strong>pypandoc</strong>, but it wraps <strong>Pandoc</strong>.</p>
 </blockquote>
 <h3 id="basics-of-working-with-pandoc">Basics of working with Pandoc</h3>
 <p>After installation, check Pandoc help to get acquainted with its capabilities: <code>pandoc --help</code></p>
-<p><img alt="pandoc --help result.png" src="../image/pandoc/pandoc%20--help%20result.png" /></p>
+<p><img alt="pandoc --help result.png" src="../image/pandoc/pandoc%20--help%20result.png"/></p>
 <p>Command structure:</p>
 <ul>
 <li>Enter the command pandoc.</li>
@@ -143,82 +348,93 @@ There is a <strong>Python</strong> wrapper called <strong>pypandoc</strong>, but
 </ul>
 <blockquote>
 <p>Use Tab to autocomplete file names in the terminal - this will also automatically add the necessary slashes.</p>
-</blockquote></div>
-            </div>
-        </div>
-
-        <footer class="col-md-12">
-            <hr>
-            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
-        </footer>
-        <script src="../js/bootstrap.bundle.min.js"></script>
-        <script>
-            var base_url = "..",
-                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
-        </script>
-        <script src="../js/base.js"></script>
-        <script src="../search/main.js"></script>
-
-        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title" id="searchModalLabel">Search</h4>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <p>From here you can search these documents. Enter your search terms below.</p>
-                <form>
-                    <div class="form-group">
-                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
-                    </div>
-                </form>
-                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
-            </div>
-            <div class="modal-footer">
-            </div>
-        </div>
-    </div>
-</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-              <table class="table">
-                <thead>
-                  <tr>
-                    <th style="width: 20%;">Keys</th>
-                    <th>Action</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td class="help shortcut"><kbd>?</kbd></td>
-                    <td>Open this help</td>
-                  </tr>
-                  <tr>
-                    <td class="next shortcut"><kbd>n</kbd></td>
-                    <td>Next page</td>
-                  </tr>
-                  <tr>
-                    <td class="prev shortcut"><kbd>p</kbd></td>
-                    <td>Previous page</td>
-                  </tr>
-                  <tr>
-                    <td class="search shortcut"><kbd>s</kbd></td>
-                    <td>Search</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <div class="modal-footer">
-            </div>
-        </div>
-    </div>
+</blockquote>
+<h4 id="converting-multiple-markdown-files-into-a-single-docx-file">Converting multiple Markdown-files into a single DOCX file</h4>
+<p>In the previous section, we learned how to convert Markdown files to docx, but we encountered the fact that each file needs to be converted separately. This is inconvenient, since you will have to manually assemble the document later.
+In order to convert multiple Markdown files to a DOCX file in the specified order, you need to create an additional file and run just one command.</p>
+<h5 id="creating-a-filelisttxt-file">Creating a filelist.txt file</h5>
+<p>Setting the order of Markdown documents is necessary, since <a href="#" title="Integrated development environment (IDE) with support for Python, Markdown files, and documentation preview functions">PyCharm</a> automatically sorts documents alphabetically. To do this, I create a document <code>filelist.txt</code>.</p>
+<p><img alt="filelist_txt.png" src="../image/From%20md%20to%20docx/filelist_txt.png"/></p>
+<p>Then I fill the document with paths in the order in which they should be written in DOCX.</p>
+<p><img alt="md files list.png" src="../image/From%20md%20to%20docx/md%20files%20list.png"/></p>
+<blockquote>
+<p>I use <a href="#" title="References to files or folders relative to the current working directory, instead of specifying the full path">relative paths</a> and escape the paths in quotes.</p>
+</blockquote>
+<h5 id="running-the-command">Running the command</h5>
+<p>Once the <code>filelist.txt</code> document is created, I use the following command: <code>cat filelist.txt | xargs pandoc --from=markdown+rebase_relative_paths-blank_before_blockquote -t ​​docx -o combined.docx</code></p>
+<p>This will generate the <code>combined.docx</code> file.</p>
+<blockquote>
+<p>If you get <code>No such file or directory</code> as a result of running the command, check which directory you are running the command from. Run '<a href="#" title="A terminal command that shows the current working directory">pwd</a>' and make sure you are running the document conversion from the same directory where the Markdown files and images are located.
+You are probably running the convert command from the top directory, so change to the correct directory (use <code>cd</code> command)</p>
+</blockquote>
+<p>My <a href="#" title="A hierarchical organization of files and folders in a project. For example, the docs/ folder contains Markdown documents">project structure</a> is shown below:</p>
+<p><code>how-to-create-web-docs/
+├── .venv/ # Directory for storing the Python virtual environment
+├── docs/ # Folder with the main project documentation
+│ ├──image/ # Document images
+│ ├── Convert Markdown to docx.md # Markdown file
+│ ├── Deploy and Customize MkDocs.md # Markdown file
+│ ├── Documentation Setup.md # Markdown file
+│ ├── Links.md # Markdown file
+│ ├── Project Setup.md # Markdown file
+│ ├── index.md # Main documentation page
+│ ├── extra.css # Additional styles for formatting the documentation
+│ ├── filelist.txt # File containing a list of Markdown documents
+├── site/ # Directory where MkDocs generates a static site
+├── .gitignore # Git configuration file that specifies which files or folders to exclude from the repository
+├── mkdocs.yml # Main MkDocs configuration file</code></p>
+<h5 id="command-explanation">Command Explanation</h5>
+<p>This command converts multiple Markdown files specified in filelist.txt into a single DOCX document using the pandoc utility. Here's a step-by-step explanation:</p>
+<ol>
+<li>
+<p><code>cat filelist.txt</code>
+    The <code>cat</code> command outputs the contents of <code>filelist.txt</code>. This file is assumed to list the paths to the Markdown files to be processed. Each path is on a new line.</p>
+<p>Example contents of <code>filelist.txt</code>:</p>
+<p><code>chapter1.md
+chapter2.md
+chapter3.md</code></p>
+</li>
+<li>
+<p><code>|</code> (<a href="#" title="(|): a symbol used to pass the output of one command as input to another command">pipe</a>)
+The <code>|</code> character routes the output of the <a href="#" title="a terminal command that prints the contents of a file to the terminal">cat</a> command as input to the command <a href="#" title="A command-line utility that allows you to pass input (such as a list of files) to another command as arguments">xargs</a>.</p>
+</li>
+<li>
+<p><code>xargs</code>
+The <code>xargs</code> command takes the strings passed through the <a href="#" title="(|): a symbol used to pass the output of one command as input to another command">pipe</a> and substitutes them as arguments to the pandoc command. This allows each of the specified files to be processed.</p>
+</li>
+<li>
+<p>pandoc <code>--from=markdown+rebase_relative_paths-blank_before_blockquote -t docx -o combined.docx</code>
+This command uses <code>pandoc</code> to convert Markdown files into a single DOCX document. Let's look at pandoc's arguments:</p>
+<ul>
+<li><code>--from=markdown+rebase_relative_paths-blank_before_blockquote</code>: The option specifies the format of the input files.</li>
+<li><code>markdown</code> is the Markdown format.</li>
+<li><code>+rebase_relative_paths</code> makes pandoc update <a href="#" title="References to files or folders relative to the current working directory, instead of specifying the full path">relative paths</a> in files.</li>
+<li><code>-blank_before_blockquote</code> disables adding blank lines before blockquotes.</li>
+<li><code>-t docx</code>: The option specifies the target conversion format - DOCX (Microsoft Word).</li>
+<li><code>-o combined.docx</code>: The option specifies the name of the output file (combined.docx).</li>
+</ul>
+</li>
+</ol>
+<p>What the whole command does:</p>
+<p><code>cat filelist.txt</code> reads a list of Markdown files.</p>
+<p><code>xargs</code> passes this list to pandoc.</p>
+<p><code>pandoc</code> combines all the specified files and converts them into a single DOCX file.</p>
+<p><strong>Example output:</strong></p>
+<p>If <code>filelist.txt</code> specifies the files:</p>
+<p><code>chapter1.md
+chapter2.md
+chapter3.md</code>
+Then pandoc will combine their contents into a single file <code>combined.docx</code>.</p>
+</article>
 </div>
-
-    </body>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+</main>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "header.autohide", "content.tooltips"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+<script src="../assets/javascripts/bundle.60a45f97.min.js"></script>
+</body>
 </html>
