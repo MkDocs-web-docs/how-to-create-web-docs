@@ -574,26 +574,27 @@ extra: {}
 </code></pre>
 <p>Now our project structure looks this:</p>
 <p>how-to-create-web-docs/<br/>
-├── docs/                          # Directory with Markdown documentation files<br/>
-│   ├── Convert Markdown to docx.md<br/>
-│   ├── Deploy and Customize MkDocs.md<br/>
-│   ├── Documentation Setup.md<br/>
-│   ├── extra.css                  # Custom styles (if applicable)<br/>
-│   ├── filelist.txt               # Auxiliary file (e.g. file list)<br/>
-│   ├── Glossary.md              <br/>
-│   ├── index.md                 <br/>
-│   ├── Links.md                 <br/>
-│   ├── Material theme for MkDocs.md<br/>
-│   ├── Project Setup.md         <br/>
-├── image/                         # Image folder<br/>
-├── overrides/                     # Template customization<br/>
-│   ├── partials/                  # Template parts<br/>
-│   │   ├── footer.html            # Custom footer<br/>
-├── site/                          # Generated site (created automatically)<br/>
-├── venv/                          # Python virtual environment<br/>
-├── .gitignore                     # File to exclude from repository<br/>
-├── mkdocs.yml                     # Main MkDocs configuration file<br/>
-├── requirements.txt               # Project dependencies file  </p>
+|--- docs/                          # Directory with Markdown documentation files<br/>
+|   |--- image/                     # Image folder
+|   |--- Convert Markdown to docx.md<br/>
+|   |--- Deploy and Customize MkDocs.md<br/>
+|   |--- Documentation Setup.md<br/>
+|   |--- extra.css                  # Custom styles (if applicable)<br/>
+|   |--- filelist.txt               # Auxiliary file (e.g. file list)<br/>
+|   |--- Glossary.md              <br/>
+|   |--- index.md                 <br/>
+|   |--- Links.md                 <br/>
+|   |--- Material theme for MkDocs.md<br/>
+|   |--- Project Setup.md
+|--- overrides/                     # Template customization<br/>
+|   |--- partials/                  # Template parts<br/>
+|   |   |--- footer.html            # Custom footer<br/>
+|--- site/                          # Generated site (created automatically)<br/>
+|--- venv/                          # Python virtual environment<br/>
+|--- .gitignore                     # File to exclude from repository<br/>
+|--- mkdocs.yml                     # Main MkDocs configuration file<br/>
+|--- requirements.txt               # Project dependencies file  </p>
+<p>Don't forget to regularly commit and push the sources so as not to lose anything✨</p>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
